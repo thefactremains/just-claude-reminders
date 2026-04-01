@@ -12,13 +12,30 @@ Built with the same architecture as [just-claude-things](https://github.com/Phan
 
 ## Installation
 
-### Claude Code
+### One-line installer (recommended)
+
+The interactive installer checks prerequisites, clones the repo, builds, and auto-configures Claude Desktop and Claude Code:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Phantazein-apps/just-claude-reminders/main/install-just-claude-reminders | bash
+```
+
+The installer will:
+1. Verify macOS, Node.js 18+, and Apple Reminders
+2. Clone this repo to `~/just-claude-reminders` (or your chosen directory)
+3. Install dependencies and build
+4. Auto-detect and configure Claude Desktop and Claude Code
+5. Guide you through macOS Automation permissions
+
+### Manual setup
+
+#### Claude Code
 
 ```bash
 claude mcp add reminders -- npx -y reminders-mcp
 ```
 
-### Claude Desktop
+#### Claude Desktop
 
 Add to your `claude_desktop_config.json`:
 
@@ -33,7 +50,7 @@ Add to your `claude_desktop_config.json`:
 }
 ```
 
-### Local Development
+#### Local Development
 
 ```bash
 git clone https://github.com/Phantazein-apps/just-claude-reminders.git
